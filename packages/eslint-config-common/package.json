@@ -1,0 +1,25 @@
+{
+  "name": "@mario34/eslint-config-common",
+  "version": "0.1.0",
+  "description": "eslint的基础配置",
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
+  "author": "Mario34 <zhl.mario34@outlook.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npm.org/"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}

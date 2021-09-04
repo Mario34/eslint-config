@@ -1,0 +1,26 @@
+{
+  "name": "@mario34/eslint-config-react",
+  "version": "0.1.0",
+  "description": "适用于react项目的eslint配置",
+  "author": "Mario34 <zhl.mario34@outlook.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npm.org/"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "@mario34/eslint-config-ts": "^0.1.0",
+    "eslint-plugin-react": "^7.25.1"
+  }
+}
