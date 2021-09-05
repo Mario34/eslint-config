@@ -10,7 +10,7 @@
     "index.js"
   ],
   "publishConfig": {
-    "registry": "https://registry.npm.org/",
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "scripts": {
@@ -26,5 +26,6 @@
   },
   "peerDependencies": {
     "eslint": ">=7.4.0"
-  }
+  },
+  "gitHead": "e18ca56e43007f07b5bd0a8a8aca3005afeea653"
 }
