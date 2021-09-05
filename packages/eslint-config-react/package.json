@@ -10,10 +10,11 @@
     "index.js"
   ],
   "publishConfig": {
-    "registry": "https://registry.npm.org/"
+    "registry": "https://registry.npm.org/",
+    "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "lint": "eslint . --config=index.js"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
@@ -22,5 +23,8 @@
   "dependencies": {
     "@mario34/eslint-config-ts": "^0.1.0",
     "eslint-plugin-react": "^7.25.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
   }
 }

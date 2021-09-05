@@ -15,10 +15,11 @@
     "index.js"
   ],
   "publishConfig": {
-    "registry": "https://registry.npm.org/"
+    "registry": "https://registry.npm.org/",
+    "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "lint": "eslint . --config=index.js"
   },
   "devDependencies": {
     "eslint": "^7.32.0"
@@ -31,5 +32,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^7.17.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
   }
 }

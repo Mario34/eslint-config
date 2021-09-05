@@ -1,11 +1,17 @@
 # `@mario34/eslint-config-common`
 
-> TODO: description
+> eslint的基础配置
 
 ## Usage
 
+```bash
+yarn add @mario34/eslint-config-common
 ```
-const eslintConfigCommon = require('@mario34/eslint-config-common');
 
-// TODO: DEMONSTRATE API
+```js
+// .eslintrc.js 不建议使用简称
+module.exports = {
+  extends: ['@mario34/eslint-config-common'],
+}
+
 ```
