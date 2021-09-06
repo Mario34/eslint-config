@@ -6,9 +6,9 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "lint": "yarn common && yarn vue && yarn vue3 && yarn ts && yarn react",
+    "lint": "yarn base && yarn vue && yarn vue3 && yarn ts && yarn react",
     "publish:lerna": "lerna publish from-package",
-    "common": "eslint -c ./packages/eslint-config-common/index.js ./test/file.js",
+    "base": "eslint -c ./packages/eslint-config-base/index.js ./test/file.js",
     "vue": "eslint -c ./packages/eslint-config-vue/index.js ./test/file.vue",
     "vue3": "eslint -c ./packages/eslint-config-vue3/index.js ./test/file.vue",
     "ts": "eslint -c ./packages/eslint-config-ts/index.js ./test/file.ts",

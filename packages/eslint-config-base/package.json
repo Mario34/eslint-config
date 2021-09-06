@@ -1,5 +1,5 @@
 {
-  "name": "@mario34/eslint-config-common",
+  "name": "@mario34/eslint-config-base",
   "version": "0.1.0",
   "description": "eslint的基础配置",
   "keywords": [
@@ -21,10 +21,14 @@
     "lint": "eslint . --config=index.js"
   },
   "devDependencies": {
-    "eslint": "^7.32.0"
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2"
   },
   "peerDependencies": {
     "eslint": ">=7.4.0"
   },
-  "gitHead": "e18ca56e43007f07b5bd0a8a8aca3005afeea653"
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.10",
+    "eslint-plugin-import": "^2.24.2"
+  }
 }

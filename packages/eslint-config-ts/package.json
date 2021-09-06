@@ -17,7 +17,7 @@
     "lint": "eslint . --config=index.js"
   },
   "dependencies": {
-    "@mario34/eslint-config-common": "^0.1.0",
+    "@mario34/eslint-config-base": "^0.1.0",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
     "@typescript-eslint/parser": "^4.30.0"
   },

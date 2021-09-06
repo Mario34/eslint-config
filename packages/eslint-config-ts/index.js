@@ -5,7 +5,7 @@ module.exports = {
     browser: true,
   },
   parser: '@typescript-eslint/parser',
-  extends: ['@mario34/eslint-config-common', 'plugin:@typescript-eslint/recommended'],
+  extends: ['@mario34/eslint-config-base', 'plugin:@typescript-eslint/recommended'],
   plugins: ['@typescript-eslint'],
   parserOptions: {
     ecmaVersion: 2020,
