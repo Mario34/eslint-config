@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "适用于react项目的eslint配置",
   "author": "Mario34 <zhl.mario34@outlook.com>",
-  "homepage": "",
+  "homepage": "https://github.com/Mario34/eslint-config",
   "license": "MIT",
   "main": "index.js",
   "files": [

@@ -8,7 +8,7 @@
     "vue-eslint"
   ],
   "author": "Mario34 <zhl.mario34@outlook.com>",
-  "homepage": "",
+  "homepage": "https://github.com/Mario34/eslint-config",
   "license": "MIT",
   "main": "index.js",
   "files": [

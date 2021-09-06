@@ -7,11 +7,12 @@
     "eslint-config"
   ],
   "author": "Mario34 <zhl.mario34@outlook.com>",
-  "homepage": "",
+  "homepage": "https://github.com/Mario34/eslint-config",
   "license": "MIT",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "rules/*"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -21,14 +22,12 @@
     "lint": "eslint . --config=index.js"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-plugin-import": "^2.24.2"
+    "eslint": "^7.32.0"
   },
   "peerDependencies": {
     "eslint": ">=7.4.0"
   },
   "dependencies": {
-    "confusing-browser-globals": "^1.0.10",
-    "eslint-plugin-import": "^2.24.2"
+    "confusing-browser-globals": "^1.0.10"
   }
 }

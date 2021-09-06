@@ -1,12 +1,16 @@
 module.exports = {
-  root: true,
-  env: {
-    node: true,
-  },
   extends: ['plugin:vue/recommended', '@vue/standard', '@mario34/eslint-config-base'],
   parserOptions: {
     parser: 'babel-eslint',
   },
+  overrides: [
+    {
+      files: ['*.vue'],
+      rules: {
+        'max-len': 'off',
+      },
+    },
+  ],
   rules: {
     'vue/max-attributes-per-line': [
       2,
