@@ -1,0 +1,54 @@
+name: publish
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+
+env:
+  CI: true
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: GITHUB CONTEXT
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - name: Get commit message
+        run: |
+          COMMIT_MESSAGE=$(git log --format=%B -n 1)
+          echo "$COMMIT_MESSAGE"
+          echo "commitmsg=${COMMIT_MESSAGE}" >> $GITHUB_ENV
+      - name: Show commit message
+        run: echo "$commitmsg"
+      - name: Setup Node ${{ matrix.node_version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: "https://registry.npmjs.org"
+      - name: Git Identity
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run test
+        if: startsWith( env.commitmsg , 'chore(release):' )
+        run: |
+          yarn
+          yarn lint
+      - name: Publish
+        if: startsWith( env.commitmsg , 'chore(release):' )
+        run: |
+          yarn lerna publish from-package --yes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
