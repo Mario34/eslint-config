@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['plugin:vue/recommended', '@vue/standard', '@mario34/eslint-config-base'],
+  extends: ['plugin:vue/recommended', 'eslint-config-standard', '@mario34/eslint-config-base'],
   overrides: [
     {
       files: ['*.vue'],
