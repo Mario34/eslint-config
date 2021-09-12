@@ -1,8 +1,5 @@
 module.exports = {
   extends: ['plugin:vue/recommended', '@vue/standard', '@mario34/eslint-config-base'],
-  parserOptions: {
-    parser: 'babel-eslint',
-  },
   overrides: [
     {
       files: ['*.vue'],

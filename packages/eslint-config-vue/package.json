@@ -1,6 +1,6 @@
 {
   "name": "@mario34/eslint-config-vue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "适用于vue2.x项目的eslint配置",
   "keywords": [
     "eslint",
@@ -26,8 +26,7 @@
   },
   "dependencies": {
     "@mario34/eslint-config-base": "^0.1.0",
-    "@vue/eslint-config-standard": "^6.1.0",
-    "babel-eslint": "^10.1.0",
+    "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",

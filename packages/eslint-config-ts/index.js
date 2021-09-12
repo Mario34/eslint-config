@@ -1,15 +1,14 @@
 module.exports = {
-  root: true,
-  env: {
-    node: true,
-    browser: true,
-  },
   parser: '@typescript-eslint/parser',
-  extends: ['@mario34/eslint-config-base', 'plugin:@typescript-eslint/recommended'],
+  parserOptions: { sourceType: 'module', ecmaVersion: 2020 },
   plugins: ['@typescript-eslint'],
-  parserOptions: {
-    ecmaVersion: 2020,
-  },
+  extends: [
+    '@mario34/eslint-config-base/rules/style',
+    'plugin:@typescript-eslint/recommended',
+    ...[
+      './rules/overrides-eslint.js',
+    ].map(require.resolve),
+  ],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/type-annotation-spacing': [1],
