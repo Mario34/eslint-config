@@ -1,6 +1,6 @@
 {
   "name": "@mario34/eslint-config-ts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "适用于ts项目的eslint配置",
   "author": "Mario34 <zhl.mario34@outlook.com>",
   "homepage": "https://github.com/Mario34/eslint-config",
@@ -17,11 +17,11 @@
     "lint": "eslint . --config=index.js"
   },
   "dependencies": {
-    "@mario34/eslint-config-base": "^0.1.0",
-    "@typescript-eslint/eslint-plugin": "^4.30.0",
-    "@typescript-eslint/parser": "^4.30.0"
+    "@mario34/eslint-config-base": "^0.1.0"
   },
   "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "4.30.0",
     "eslint": ">=7.4.0",
     "typescript": ">=3.9"
   },

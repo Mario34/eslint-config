@@ -79,7 +79,7 @@ module.exports = {
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': 'error',
     indent: 'off',
-    '@typescript-eslint/indent': 'error',
+    '@typescript-eslint/indent': ['error', 2],
     'init-declarations': 'off',
     '@typescript-eslint/init-declarations': 'error',
     'keyword-spacing': 'off',
@@ -89,14 +89,26 @@ module.exports = {
 
     // 需要接口和类型字面值的特定成员分隔符样式
     // Require a specific member delimiter style for interfaces and type literals
-    '@typescript-eslint/member-delimiter-style': 'error',
+    '@typescript-eslint/member-delimiter-style': [
+      1,
+      {
+        multiline: {
+          delimiter: 'none',
+          requireLast: false,
+        },
+        singleline: {
+          delimiter: 'semi',
+          requireLast: false,
+        },
+      },
+    ],
 
     // 需要一致的成员声明顺序
     // Require a consistent member declaration order
     '@typescript-eslint/member-ordering': 'error',
 
     '@typescript-eslint/method-signature-style': 'error',
-    '@typescript-eslint/naming-convention': 'error',
+    '@typescript-eslint/naming-convention': 'off',
     'no-array-constructor': 'off',
     '@typescript-eslint/no-array-constructor': 'error',
     '@typescript-eslint/no-base-to-string': 'error',

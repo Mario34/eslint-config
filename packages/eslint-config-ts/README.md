@@ -5,7 +5,7 @@
 ## Usage
 
 ```bash
-yarn add @mario34/eslint-config-ts
+yarn add @mario34/eslint-config-ts eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
 ```
 
 ```js
