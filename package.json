@@ -8,11 +8,11 @@
     "bootstrap": "lerna bootstrap",
     "lint": "yarn base && yarn vue && yarn vue3 && yarn ts && yarn react",
     "publish:lerna": "lerna publish from-package",
-    "base": "eslint -c ./packages/eslint-config-base/index.js ./test/file.js",
-    "vue": "eslint -c ./packages/eslint-config-vue/index.js ./test/file.vue",
-    "vue3": "eslint -c ./packages/eslint-config-vue3/index.js ./test/file.vue",
-    "ts": "eslint -c ./packages/eslint-config-ts/index.js ./test/file.ts",
-    "react": "eslint -c ./packages/eslint-config-react/index.js ./test/file.tsx"
+    "base": "eslint --no-ignore -c ./packages/eslint-config-base/index.js ./test/file.js",
+    "vue": "eslint --no-ignore -c ./packages/eslint-config-vue/index.js ./test/file.vue",
+    "vue3": "eslint --no-ignore -c ./packages/eslint-config-vue3/index.js ./test/file.vue",
+    "ts": "eslint --no-ignore -c ./packages/eslint-config-ts/index.js ./test/file.ts",
+    "react": "eslint --no-ignore -c ./packages/eslint-config-react/index.js ./test/file.tsx"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
