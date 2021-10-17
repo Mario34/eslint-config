@@ -1,5 +1,3 @@
-const a = 1
-
-const b = {
-    a
+export const data = {
+  a: 'demo',
 }

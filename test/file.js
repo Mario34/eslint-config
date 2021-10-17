@@ -1,1 +1,3 @@
-const a = 1
+export const a = {
+  text: 'demo',
+}
