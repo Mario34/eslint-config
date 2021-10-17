@@ -34,7 +34,7 @@ module.exports = {
 
     // 对块强制一致的大括号样式
     // Enforce consistent brace style for blocks
-    '@typescript-eslint/brace-style': 'error',
+    '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
 
     // 确保类上的文字以一致的样式公开
     // Ensures that literals on classes are exposed in a consistent style
@@ -44,13 +44,19 @@ module.exports = {
 
     // 要求或禁止尾随逗号
     // Require or disallow trailing comma
-    '@typescript-eslint/comma-dangle': 'error',
+    '@typescript-eslint/comma-dangle': ['error', {
+      arrays: 'always-multiline',
+      objects: 'always-multiline',
+      imports: 'always-multiline',
+      exports: 'always-multiline',
+      functions: 'always-multiline',
+    }],
 
     'comma-spacing': 'off',
 
     // 强制逗号前后的空格保持一致
     // Enforces consistent spacing before and after commas
-    '@typescript-eslint/comma-spacing': 'error',
+    '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
 
     // 强制或禁止使用记录类型Record<string, unknown> => {}
     // Enforce or disallow the use of the record type
@@ -77,15 +83,46 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'error',
 
     'func-call-spacing': 'off',
-    '@typescript-eslint/func-call-spacing': 'error',
+    '@typescript-eslint/func-call-spacing': ['error', 'never'],
     indent: 'off',
-    '@typescript-eslint/indent': ['error', 2],
+    '@typescript-eslint/indent': ['error', 2, {
+      SwitchCase: 1,
+      VariableDeclarator: 1,
+      outerIIFEBody: 1,
+      // MemberExpression: null,
+      FunctionDeclaration: {
+        parameters: 1,
+        body: 1,
+      },
+      FunctionExpression: {
+        parameters: 1,
+        body: 1,
+      },
+      CallExpression: {
+        arguments: 1,
+      },
+      ArrayExpression: 1,
+      ObjectExpression: 1,
+      ImportDeclaration: 1,
+      flatTernaryExpressions: false,
+      // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
+      ignoredNodes: ['JSXElement', 'JSXElement > *', 'JSXAttribute', 'JSXIdentifier', 'JSXNamespacedName', 'JSXMemberExpression', 'JSXSpreadAttribute', 'JSXExpressionContainer', 'JSXOpeningElement', 'JSXClosingElement', 'JSXFragment', 'JSXOpeningFragment', 'JSXClosingFragment', 'JSXText', 'JSXEmptyExpression', 'JSXSpreadChild'],
+      ignoreComments: false,
+    }],
     'init-declarations': 'off',
     '@typescript-eslint/init-declarations': 'error',
     'keyword-spacing': 'off',
-    '@typescript-eslint/keyword-spacing': 'error',
+    '@typescript-eslint/keyword-spacing': ['error', {
+      before: true,
+      after: true,
+      overrides: {
+        return: { after: true },
+        throw: { after: true },
+        case: { after: true },
+      },
+    }],
     'lines-between-class-members': 'off',
-    '@typescript-eslint/lines-between-class-members': 'error',
+    '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: false }],
 
     // 需要接口和类型字面值的特定成员分隔符样式
     // Require a specific member delimiter style for interfaces and type literals
@@ -136,12 +173,14 @@ module.exports = {
     '@typescript-eslint/no-implied-eval': 'error',
     '@typescript-eslint/no-inferrable-types': 'error',
     'no-invalid-this': 'off',
-    '@typescript-eslint/no-invalid-this': 'error',
+    // TODO: off @typescript-eslint/no-invalid-this
+    '@typescript-eslint/no-invalid-this': 'off',
     '@typescript-eslint/no-invalid-void-type': 'error',
     'no-loop-func': 'off',
     '@typescript-eslint/no-loop-func': 'error',
     'no-loss-of-precision': 'off',
-    '@typescript-eslint/no-loss-of-precision': 'error',
+    // TODO: off @typescript-eslint/no-loss-of-precision
+    '@typescript-eslint/no-loss-of-precision': 'off',
     'no-magic-numbers': 'off',
     '@typescript-eslint/no-magic-numbers': 'error',
     '@typescript-eslint/no-meaningless-void-operator': 'error',
@@ -159,7 +198,8 @@ module.exports = {
     '@typescript-eslint/no-this-alias': 'error',
     'no-throw-literal': 'off',
     '@typescript-eslint/no-throw-literal': 'error',
-    '@typescript-eslint/no-type-alias': 'error',
+    // TODO: off no-type-alias
+    '@typescript-eslint/no-type-alias': 'off',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
     '@typescript-eslint/no-unnecessary-condition': 'error',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
@@ -172,7 +212,11 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 'error',
     '@typescript-eslint/no-unsafe-return': 'error',
     'no-unused-expressions': 'off',
-    '@typescript-eslint/no-unused-expressions': 'error',
+    '@typescript-eslint/no-unused-expressions': ['error', {
+      allowShortCircuit: false,
+      allowTernary: false,
+      allowTaggedTemplates: false,
+    }],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     'no-use-before-define': 'off',
@@ -182,7 +226,7 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'error',
     'object-curly-spacing': 'off',
-    '@typescript-eslint/object-curly-spacing': 'error',
+    '@typescript-eslint/object-curly-spacing': ['error', 'always'],
     'padding-line-between-statements': 'off',
     '@typescript-eslint/padding-line-between-statements': 'error',
     '@typescript-eslint/prefer-as-const': 'error',
@@ -195,7 +239,8 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/prefer-optional-chain': 'error',
     '@typescript-eslint/prefer-readonly': 'error',
-    '@typescript-eslint/prefer-readonly-parameter-types': 'error',
+    // TODO: off prefer-readonly-parameter-types
+    '@typescript-eslint/prefer-readonly-parameter-types': 'off',
     '@typescript-eslint/prefer-reduce-type-parameter': 'error',
     '@typescript-eslint/prefer-regexp-exec': 'error',
     '@typescript-eslint/prefer-return-this-type': 'error',
@@ -203,22 +248,24 @@ module.exports = {
     '@typescript-eslint/prefer-ts-expect-error': 'error',
     '@typescript-eslint/promise-function-async': 'error',
     quotes: 'off',
-    '@typescript-eslint/quotes': 'error',
+    '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true }],
     '@typescript-eslint/require-array-sort-compare': 'error',
     'require-await': 'off',
-    '@typescript-eslint/require-await': 'error',
+    // TODO: off @typescript-eslint/require-await
+    '@typescript-eslint/require-await': 'off',
     '@typescript-eslint/restrict-plus-operands': 'error',
     '@typescript-eslint/restrict-template-expressions': 'error',
     'no-return-await': 'off',
     '@typescript-eslint/return-await': 'error',
     semi: 'off',
-    '@typescript-eslint/semi': 'error',
+    '@typescript-eslint/semi': ['error', 'never'],
     '@typescript-eslint/sort-type-union-intersection-members': 'error',
     'space-before-function-paren': 'off',
     '@typescript-eslint/space-before-function-paren': 'error',
     'space-infix-ops': 'off',
     '@typescript-eslint/space-infix-ops': 'error',
-    '@typescript-eslint/strict-boolean-expressions': 'error',
+    // TODO: off strict-boolean-expressions
+    '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
     '@typescript-eslint/triple-slash-reference': 'error',
     '@typescript-eslint/type-annotation-spacing': 'error',
