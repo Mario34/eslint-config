@@ -4,14 +4,12 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: [
     '@mario34/eslint-config-base/rules/style',
+    '@mario34/eslint-config-base/rules/errors',
     'plugin:@typescript-eslint/recommended',
     ...[
-      './rules/all.js',
+      // './rules/all.js',
       './rules/overrides-eslint.js',
     ].map(require.resolve),
   ],
-  rules: {
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-  },
+  rules: { },
 }
