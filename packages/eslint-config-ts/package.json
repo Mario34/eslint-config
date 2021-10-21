@@ -1,6 +1,6 @@
 {
   "name": "@mario34/eslint-config-ts",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "适用于ts项目的eslint配置",
   "author": "Mario34 <zhl.mario34@outlook.com>",
   "homepage": "https://github.com/Mario34/eslint-config",
