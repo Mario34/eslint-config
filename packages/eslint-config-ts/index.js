@@ -3,7 +3,7 @@ module.exports = {
   parserOptions: { sourceType: 'module', ecmaVersion: 2020, project: ['tsconfig.json'] },
   plugins: ['@typescript-eslint'],
   extends: [
-    '@mario34/eslint-config-base/rules/style',
+    '@mario34/eslint-config-base',
     '@mario34/eslint-config-base/rules/errors',
     'plugin:@typescript-eslint/recommended',
     ...[
