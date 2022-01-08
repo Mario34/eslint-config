@@ -2,6 +2,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     '@mario34/eslint-config-ts',
+    'plugin:react/jsx-runtime',
   ],
   settings: {
     react: {
@@ -65,7 +66,7 @@ module.exports = {
       },
     ],
     'react/no-unused-state': 'error',
-    'react/require-default-props': ['error', { forbidDefaultForRequired: true }],
+    'react/require-default-props': ['off', { forbidDefaultForRequired: true }],
     'react/jsx-no-duplicate-props': ['error', { ignoreCase: false }],
     'react/self-closing-comp': [
       'warn',
@@ -74,5 +75,6 @@ module.exports = {
         html: false,
       },
     ],
+    'react/prop-types': 'off',
   },
 }

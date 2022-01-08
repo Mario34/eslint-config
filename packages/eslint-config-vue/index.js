@@ -1,4 +1,13 @@
 module.exports = {
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+  },
+  env: {
+    browser: true,
+    es6: true,
+  },
   extends: ['plugin:vue/recommended', 'eslint-config-standard', '@mario34/eslint-config-base'],
   overrides: [
     {
@@ -9,6 +18,7 @@ module.exports = {
     },
   ],
   rules: {
+    'max-len': ['off'],
     'vue/max-attributes-per-line': [
       2,
       {

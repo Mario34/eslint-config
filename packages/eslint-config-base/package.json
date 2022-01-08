@@ -1,6 +1,6 @@
 {
   "name": "@mario34/eslint-config-base",
-  "version": "0.1.1",
+  "version": "0.3.0",
   "description": "eslint的基础配置",
   "keywords": [
     "eslint",

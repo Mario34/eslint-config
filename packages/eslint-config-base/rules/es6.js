@@ -120,7 +120,7 @@ module.exports = {
 
     // Prefer destructuring from arrays and objects
     // https://eslint.org/docs/rules/prefer-destructuring
-    'prefer-destructuring': ['error', {
+    'prefer-destructuring': ['off', {
       VariableDeclarator: {
         array: false,
         object: true,
