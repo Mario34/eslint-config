@@ -573,5 +573,11 @@ module.exports = {
     // 要求正则表达式被括号括起来
     // require regex literals to be wrapped in parentheses
     'wrap-regex': 'off',
+
+    // disallow use of multiple spaces
+    // https://eslint.org/docs/rules/no-multi-spaces
+    'no-multi-spaces': ['error', {
+      ignoreEOLComments: false,
+    }],
   },
 }

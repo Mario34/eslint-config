@@ -200,12 +200,6 @@ module.exports = {
       detectObjects: false,
     }],
 
-    // disallow use of multiple spaces
-    // https://eslint.org/docs/rules/no-multi-spaces
-    'no-multi-spaces': ['error', {
-      ignoreEOLComments: false,
-    }],
-
     // disallow use of multiline strings
     // https://eslint.org/docs/rules/no-multi-str
     'no-multi-str': 'error',
