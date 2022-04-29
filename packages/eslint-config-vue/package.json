@@ -1,6 +1,6 @@
 {
   "name": "@mario34/eslint-config-vue",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "适用于vue2.x项目的eslint配置",
   "keywords": [
     "eslint",
