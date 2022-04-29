@@ -15,6 +15,6 @@
     "react": "eslint --no-ignore -c ./packages/eslint-config-react/index.js ./test/file.tsx"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "@changesets/cli": "^2.22.0"
   }
 }
