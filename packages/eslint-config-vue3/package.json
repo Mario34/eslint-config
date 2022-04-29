@@ -17,7 +17,7 @@
     "lint": "eslint . --config=index.js"
   },
   "dependencies": {
-    "@mario34/eslint-config-ts": "^0.3.0",
+    "@mario34/eslint-config-ts": "^1.0.0",
     "@rushstack/eslint-patch": "^1.1.0",
     "@vue/eslint-config-typescript": "^10.0.0",
     "eslint-plugin-vue": "^8.0.0"
