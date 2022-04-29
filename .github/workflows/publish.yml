@@ -40,15 +40,19 @@ jobs:
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
       - name: Run test
         if: startsWith( env.commitmsg , 'chore(release):' )
         run: |
-          yarn
-          yarn lint
+          pnpm
+          pnpm lint
       - name: Publish
         if: startsWith( env.commitmsg , 'chore(release):' )
         run: |
-          yarn lerna publish from-package --yes
+          pnpm publish -r
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
